@@ -1,0 +1,48 @@
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <algorithm>
+using namespace std;
+typedef long long ll;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+//--------------------------------------------------------
+void isDistinct(ll x)
+{
+    ll first, sec, third, fourth, t, cnt;
+    for (ll i = x; i <= 10000;)
+    {
+        ++i;
+        t = i;
+        cnt = 0;
+        fourth = t % 10;
+        t /= 10;
+        third = t % 10;
+        t /= 10;
+        sec = t % 10;
+        t /= 10;
+        first = t % 10;
+        if (first != sec && first != third && first != fourth)
+            cnt++;
+        if (sec != first && sec != third && sec != fourth)
+            cnt++;
+        if (third != first && third != sec && third != fourth)
+            cnt++;
+        if (fourth != sec && fourth != third && fourth != first)
+            cnt++;
+        if (cnt == 4)
+        {
+            cout << i << endl;
+            break;
+        }
+    }
+}
+int main()
+{
+    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    /***/
+    ll n;
+    cin >> n;
+    isDistinct(n);
+    return 0;
+}
