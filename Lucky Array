@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+typedef long long ll;
+int main()
+{
+    ll n,min,count=0;
+    cin>>n;
+    ll arr[n];
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    min=arr[0];
+    //get the MIn num
+    for(int  j=0; j<n; j++)
+    {
+        if(arr[j]<min)
+            min=arr[j];
+    }
+    //Numbers of min
+    for(int i=0; i<n; i++)
+    {
+        if(arr[i]==min)
+            count++;
+    }
+    if(count%2==0)
+    {
+        cout<<"Unlucky"<<endl;
+    }else{
+        cout<<"Lucky"<<endl;
+    }
+    return 0;
+}
