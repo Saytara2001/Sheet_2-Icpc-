@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+typedef long long ll;
+int main()
+{
+    ll t,x,y,sum,cnt;
+    cin>>t;
+    for(int i=1; i<=t; i++)
+    {
+        sum=0,cnt=0;
+        cin>>x>>y;
+        for(int j=x; j<=x+10; j++)
+        {
+            if(cnt==y)
+            {
+                break;
+            }
+            if(j%2 != 0)
+            {
+                cnt++;
+                sum+=j;
+            }
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
