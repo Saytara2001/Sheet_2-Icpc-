@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+typedef long long ll;
+int main()
+{
+    ll n;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+        cout<<i<<endl;
+    return 0;
+}
