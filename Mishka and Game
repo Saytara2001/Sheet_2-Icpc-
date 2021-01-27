@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+typedef long long ll;
+int main()
+{
+    ll n,a,b,misha=0,chris=0;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a>>b;
+        if(a>b)
+            misha++;
+        else if(b>a)
+            chris++;
+    }
+    if(misha>chris)
+        cout<<"Mishka"<<endl;
+    else if(misha<chris)
+        cout<<"Chris"<<endl;
+    else
+        cout<<"Friendship is magic!^^"<<endl;
+    return 0;
+}
