@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+typedef long long ll;
+int main()
+{
+    ll n;
+    bool check = true;
+    cin>>n;
+    for(int i=2;i<n;i++)
+    {
+        if(n%i==0)
+            check=false;
+    }
+    if(check && n>1)
+    {
+        cout<<"YES"<<endl;
+    }else{
+         cout<<"NO"<<endl;
+    }
+    return 0;
+}
