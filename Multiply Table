@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int const N = 5e5 + 5, mod = 1e9 + 7, oo = 1e5 + 10;
+typedef long long ll;
+int main()
+{
+    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    ll n,x,cnt=0,sum;
+    cin>>n>>x;
+    if(x==1)
+    {
+        cout<<1<<endl;
+    }
+    else
+    {
+        for(ll i=1; i<=n; i++)
+        {
+            if(x%i==0 && x/i<=n)
+                cnt++;
+        }
+        cout<<cnt<<endl;
+    }
+    return 0;
+}
